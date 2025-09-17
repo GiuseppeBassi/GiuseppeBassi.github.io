@@ -15,9 +15,9 @@
     <div class="contacts">
       <a href="mailto:giuseppe.bassi2@studbocconi.it" target="_blank" rel="noopener">Email</a>
       <span class="sep">•</span>
-      <a href="https://www.youtube.com/@bassigiuseppe" target="_blank" rel="noopener">YouTube</a>
-      <span class="sep">•</span>
       <a href="https://www.linkedin.com/in/giuseppe-bassi/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">•</span>
+      <a href="https://www.youtube.com/@bassigiuseppe" target="_blank" rel="noopener">YouTube</a>
       <span class="sep">•</span>
       <a href="https://www.instagram.com/bassii.giuseppe/" target="_blank" rel="noopener">Instagram</a>
     </div>

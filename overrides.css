@@ -1,11 +1,14 @@
-/* ---------------------- BRAND & FONTS ---------------------- */
+/* =========================================================
+   BRAND, TYPO & GLOBAL VARS
+   — Regola qui colori, font, dimensioni avatar e overhang —
+   ========================================================= */
 :root{
-  /* Blues */
+  /* Brand (attuale palette blu; puoi cambiare più tardi) */
   --brand-blue: #062449;        /* dark */
   --brand-blue-mid: #0b3a6d;    /* mid */
   --brand-blue-light: #1a5aa6;  /* light */
 
-  /* Material mapping */
+  /* Material theme mapping */
   --md-primary-fg-color: var(--brand-blue);
   --md-primary-fg-color--light: var(--brand-blue-light);
   --md-primary-fg-color--dark: var(--brand-blue);
@@ -15,15 +18,21 @@
   --md-text-font: Georgia, "Times New Roman", serif;
   --md-code-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* Hero sizing */
-  --avatar-size: 150px;  /* leggermente più grande */
-  --overlay-drop: 38px;
+  /* Hero & overlay controls */
+  --avatar-size: 150px;     /* dimensione avatar */
+  /* Extra “uscita” sotto al lago per overlay (1 cm ≈ 38px) */
+  --overhang-extra: 38px;
+  /* Calcolo unico usato ovunque per coerenza (25% avatar + extra) */
+  --overhang: calc(0.25 * var(--avatar-size) + var(--overhang-extra));
 }
 
+/* Font applicati */
 body, .md-typeset { font-family: var(--md-text-font); }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }
 
-/* ---------------------- BACKGROUND & CARD ---------------------- */
+/* =========================================================
+   PAGE BACKGROUND & CONTENT CARD
+   ========================================================= */
 [data-md-color-scheme="default"] .md-main,
 [data-md-color-scheme="slate"] .md-main{
   background:
@@ -41,43 +50,43 @@ body, .md-typeset { font-family: var(--md-text-font); }
   padding: .25rem .25rem 0 .25rem;
 }
 
-/* ---------------------- NAV/SIDEBAR ---------------------- */
-/*.md-sidebar--primary,
-.md-sidebar--primary .md-sidebar__inner,
-.md-nav, .md-nav__list, .md-nav__item { background: #ffffff !important; }
-.md-sidebar--secondary { background: #ffffff !important; }
-.md-nav__link, .md-nav__item .md-nav__link{ color: #0f172a; }
-.md-nav__link:hover { color: var(--brand-blue-mid); }
-a:hover{ color: var(--brand-blue-light); } */
-
-/* --- Uniforma aspetto voce attiva/hover in nav primaria e TOC --- */
-.md-nav__link[aria-current],
-.md-nav__link--active {
-  background: transparent !important;        /* niente “pill” largo */
+/* =========================================================
+   NAV & SIDEBAR — uniforma “Home” e TOC (niente pill largo)
+   ========================================================= */
+/* Rimuove il pill di sfondo dalle voci attive nella sidebar primaria */
+.md-sidebar--primary .md-nav__link[aria-current],
+.md-sidebar--primary .md-nav__link--active{
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.md-nav__link,
-.md-nav__item .md-nav__link {
+/* “Spina” a sinistra coerente su primaria e secondaria */
+.md-sidebar--primary .md-nav__link,
+.md-sidebar--secondary .md-nav__link{
   border-left: 3px solid transparent;
-  padding-left: calc(0.6rem - 3px);          /* compensa il bordo */
+  padding-left: calc(0.6rem - 3px) !important;
 }
 
-/* Active + Hover con stesso accento in entrambe le sidebar */
-.md-nav__link[aria-current="page"],
-.md-nav__link--active,
-.md-nav__link:hover {
-  border-left-color: var(--brand-blue);
-  color: var(--brand-blue-mid);
+/* Stato attivo/hover identico su entrambe */
+.md-sidebar--primary .md-nav__link[aria-current="page"],
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--secondary .md-nav__link[aria-current="true"],
+.md-sidebar--secondary .md-nav__link:hover{
+  border-left-color: var(--brand-blue) !important;
+  color: var(--brand-blue-mid) !important;
   background: transparent !important;
 }
 
-/* TOC (nav secondaria) allinea padding e rimuove differenze di larghezza */
-.md-sidebar--secondary .md-nav__list,
-.md-sidebar--secondary .md-nav__item { 
-  background: transparent !important; 
+/* Elimina differenze di larghezza dovute a bg/padding container */
+.md-sidebar--primary .md-nav,
+.md-sidebar--secondary .md-nav{
+  background: transparent !important;
 }
 
-/* ---------------------- BUTTONS ---------------------- */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 .md-typeset .md-button--primary{
   background-color: var(--brand-blue);
   border-color: var(--brand-blue);
@@ -95,29 +104,33 @@ a:hover{ color: var(--brand-blue-light); } */
 .top-cta{
   display:flex;
   justify-content:center;
-  margin: 10px 0 14px 0; /* nessuna riga sopra */
+  margin: 10px 0 14px 0;
 }
 
-/* ---------------------- PAGE TITLE ---------------------- */
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
 .page-title{
   display: flex;
-  justify-content: center;   /* centrato */
+  justify-content: center;
   margin: 6px 2px 12px 2px;
 }
 .page-title h1{
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
-  font-size: 40px;           /* leggermente più grande */
+  font-size: 40px;
   color: #111;
   letter-spacing: .2px;
 }
 
-/* ---------------------- HERO (Lago chiaro, nitido) ---------------------- */
+/* =========================================================
+   HERO — Lago chiaro + overlay controllato da --overhang
+   ========================================================= */
 .hero-wrap{
   position: relative;
-  /* spazio per la fascia sovrapposta (avatar esce 25%) */
-  margin-bottom: calc(0.25 * var(--avatar-size) + 12px);
+  /* Spazio sotto al lago per ospitare overlay che “esce” */
+  margin-bottom: calc(var(--overhang) + 12px);
 }
 .hero-lake{
   position: relative;
@@ -127,18 +140,17 @@ a:hover{ color: var(--brand-blue-light); } */
   background-image: url("assets/Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
-  isolation: isolate;
+  isolation: isolate; /* evita blending strani */
 }
-/* NESSUN overlay scuro: vogliamo l'immagine chiara e nitida */
-/* Se volessi appena un tocco per contrasto:
-.hero-lake::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(255,255,255,.00), rgba(255,255,255,.00)); }
-*/
+/* Niente overlay scuro: immagine chiara e nitida */
 
-/* ---------------------- OVERLAY STRIP (avatar + contatti + loghi) ---------------------- */
+/* =========================================================
+   OVERLAY STRIP (avatar + contatti + loghi)
+   ========================================================= */
 .overlay-row{
   position: absolute;
   left: 18px; right: 18px;
-  bottom: calc(-0.25 * var(--avatar-size) - var(--overlay-drop));
+  bottom: calc(-1 * var(--overhang)); /* esce sotto al lago */
   z-index: 2;
   display: grid;
   grid-template-columns: var(--avatar-size) 1fr auto;
@@ -148,12 +160,12 @@ a:hover{ color: var(--brand-blue-light); } */
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Avatar CIRCOLARE */
+/* Avatar circolare */
 .overlay-row .avatar{
   width: var(--avatar-size);
   height: var(--avatar-size);
   object-fit: cover;
-  border-radius: 50%;              /* cerchio */
+  border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
@@ -178,7 +190,7 @@ a:hover{ color: var(--brand-blue-light); } */
 }
 .contacts .sep{ opacity: .65; }
 
-/* Loghi più grandi, affiancati */
+/* Loghi affiancati, più grandi, senza effetti */
 .overlay-row .right{
   display: flex;
   gap: 14px;
@@ -187,7 +199,7 @@ a:hover{ color: var(--brand-blue-light); } */
   padding-bottom: 8px;
 }
 .overlay-row .right img{
-  height: 64px;                  /* più grandi */
+  height: 64px;
   object-fit: contain;
   background: transparent;
   padding: 0;
@@ -196,21 +208,26 @@ a:hover{ color: var(--brand-blue-light); } */
   filter: none;
 }
 
-/* ---------------------- Sottotitolo subito sotto il lago ---------------------- */
+/* =========================================================
+   SUBTITLE (nessun a-capo forzato)
+   ========================================================= */
 .headline-subtitle{
-  margin: calc(0.6rem + var(--overlay-drop)) 0 0.2rem 0;
+  /* margine superiore coerente con l’uscita dell’overlay */
+  margin: calc(0.6rem + var(--overhang-extra)) 0 0.2rem 0;
   text-align: center;
   font-size: 16px;
   color: #111;
   font-family: Georgia, "Times New Roman", serif;
-  max-width: 72ch;         /* forza il wrapping gradevole */
+  max-width: 72ch;     /* confortevole, ma NON forza un break specifico */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 12px;         /* un filo di respiro ai lati */
-  text-wrap: balance;      /* wrap più “bello” se supportato */
+  padding: 0 12px;
+  text-wrap: balance;  /* migliore distribuzione quando supportato */
 }
 
-/* ---------------------- NOTES: download link style (sezione notes) ---------------------- */
+/* =========================================================
+   NOTES — stile link download
+   ========================================================= */
 .md-typeset a.download-link{
   color: #111;
   font-weight: 600;
@@ -224,24 +241,34 @@ a:hover{ color: var(--brand-blue-light); } */
 }
 .md-typeset .twiddle{ margin-right: .25rem; opacity: .85; }
 
-/* ---------------------- RESPONSIVE ---------------------- */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 768px){
-  :root{ --avatar-size: 110px; --overlay-drop: 24px; }
+  :root{
+    --avatar-size: 110px;
+    --overhang-extra: 24px; /* meno uscita su mobile */
+    --overhang: calc(0.25 * var(--avatar-size) + var(--overhang-extra));
+  }
   .overlay-row{
     grid-template-columns: var(--avatar-size) 1fr;
     right: 12px; left: 12px;
   }
-  .overlay-row .right{ display: none; } /* nascondi loghi su mobile per layout pulito */
+  .overlay-row .right{ display: none; } /* nasconde loghi su mobile per pulizia */
   .page-title h1{ font-size: 32px; }
   .headline-subtitle{ font-size: 15px; }
 }
 
-/* ---------------------- NASCONDI UI SEARCH (se anche il plugin è off) ---------------------- */
+/* =========================================================
+   SEARCH UI (nascosta se plugin disabilitato)
+   ========================================================= */
 .md-header__button.md-icon[for="__search"],
 .md-search,
 .md-search__overlay{ display: none !important; }
 
-/* --- Credito foto nel footer, piccolo e poco invasivo --- */
+/* =========================================================
+   FOOTER — credito foto, piccolo e discreto
+   ========================================================= */
 .md-footer, .md-footer a { color: rgba(255,255,255,.75); }
 .wm-credit{
   font-size: 12px;
@@ -257,4 +284,3 @@ a:hover{ color: var(--brand-blue-light); } */
   text-decoration: underline;
   border-bottom-color: currentColor;
 }
-

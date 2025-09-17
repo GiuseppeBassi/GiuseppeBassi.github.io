@@ -1,55 +1,41 @@
-/* =========================================================
-   PALETTE & FONT
-   - Blu principale + varianti
-   - Georgia come font di testo (come nel tuo HTML)
-   ========================================================= */
+/* ====================== BRAND + FONT ====================== */
 :root{
-  /* Blu brand */
-  --brand-blue: #062449;        /* blu intenso (cornici/scuro) */
-  --brand-blue-mid: #0b3a6d;    /* blu medio */
-  --brand-blue-light: #1a5aa6;  /* blu più chiaro per highlight */
+  --brand-blue: #062449;        /* dark */
+  --brand-blue-mid: #0b3a6d;    /* mid */
+  --brand-blue-light: #1a5aa6;  /* light */
 
-  /* Verde BAMS (solo per bottoni primari, se piace l'accoppiata) */
   --bams-green: #0a3d2d;
   --bams-green-dark: #06291f;
-  --bams-green-light: #145a43;
 
-  /* Mappatura Material (primary = blu) */
   --md-primary-fg-color: var(--brand-blue);
   --md-primary-fg-color--light: var(--brand-blue-light);
   --md-primary-fg-color--dark: var(--brand-blue);
-
-  /* Accent lo lasciamo blu; i bottoni primari li forziamo a verde sotto */
   --md-accent-fg-color: var(--brand-blue);
 
-  /* Font Material */
   --md-text-font: Georgia, "Times New Roman", serif;
   --md-code-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-/* Applica il font al body tipografato */
-.md-typeset, body {
-  font-family: var(--md-text-font);
-}
+.md-typeset, body { font-family: var(--md-text-font); }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }
 
-/* Titoli un filo più eleganti (stessa famiglia, peso leggero) */
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
-  letter-spacing: .2px;
-}
-
-/* =========================================================
-   SFONDO SITO (tema chiaro e scuro) — NIENTE PANNA/GRIGI
-   - Radial gradient più chiaro al centro
-   - Stessa famiglia di blu anche nel tema scuro
-   ========================================================= */
+/* ====================== BACKGROUND + TEXTURE ======================
+   - Radiale chiara al centro + diagonali sottili come texture
+   - No nero/grigio in basso
+*/
 [data-md-color-scheme="default"] .md-main,
 [data-md-color-scheme="slate"] .md-main{
   background:
+    /* texture incrociata molto leggera */
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.022) 0 2px, transparent 2px 8px),
+    repeating-linear-gradient(-45deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px),
+    /* glow centrale */
     radial-gradient(circle at 50% 20%, rgba(26,90,166,0.25) 0%, rgba(11,58,109,0.20) 35%, rgba(6,36,73,0.35) 60%),
+    /* gradiente verticale blu */
     linear-gradient(180deg, #0b3a6d 0%, #062449 60%, #062449 100%);
 }
 
-/* La “carta” contenuti resta pulita e chiara */
+/* Carta contenuti bianca (leggibile) */
 [data-md-color-scheme="default"] .md-content,
 [data-md-color-scheme="slate"] .md-content{
   background: #ffffff;
@@ -58,14 +44,19 @@
   padding: .25rem .25rem 0 .25rem;
 }
 
-/* Link hover coerente in blu */
-a:hover{ color: var(--brand-blue-light); }
+/* ====================== SIDEBAR SINISTRA BIANCA (LEGGIBILE) ====================== */
+.md-sidebar--primary,
+.md-sidebar--primary .md-sidebar__inner,
+.md-nav, .md-nav__list, .md-nav__item {
+  background: #ffffff !important;
+}
+.md-nav__link, .md-nav__item .md-nav__link{
+  color: #0f172a; /* blu-grigio scuro leggibile */
+}
+.md-nav__link:hover { color: var(--brand-blue-mid); }
+.md-sidebar--primary .md-nav__title { color: #0f172a; }
 
-/* =========================================================
-   BOTTONI
-   - Primario in VERDE BAMS (contrasto forte sul blu)
-   - Secondari restano Material (bordati)
-   ========================================================= */
+/* ====================== BUTTONS ====================== */
 .md-typeset .md-button--primary{
   background-color: var(--bams-green);
   border-color: var(--bams-green);
@@ -76,9 +67,17 @@ a:hover{ color: var(--brand-blue-light); }
   border-color: var(--bams-green-dark);
 }
 
-/* =========================================================
-   HERO “LAGO DI GARDA” (più scuro in alto)
-   ========================================================= */
+/* CTA XL (sotto l'hero) */
+.md-typeset .md-button--xl{
+  font-size: 1.05rem;
+  padding: .7rem 1.15rem;
+  border-radius: 10px;
+}
+.top-cta{
+  display:flex; justify-content:center; margin: 12px 0 18px 0;
+}
+
+/* ====================== HERO LAGO: layering e leggibilità ====================== */
 .hero-lake{
   position: relative;
   border-radius: 16px;
@@ -87,18 +86,17 @@ a:hover{ color: var(--brand-blue-light); }
   background-image: url("../assets/Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
+  isolation: isolate; /* crea nuovo contesto per z-index */
 }
-
-/* Velatura: più scura in alto, più trasparente verso il centro */
 .hero-lake::after{
   content:"";
   position:absolute; inset:0;
-  background:
-    linear-gradient(180deg, rgba(6,36,73,.65) 0%, rgba(6,36,73,.35) 45%, rgba(6,36,73,.20) 100%);
+  z-index: 0; /* velatura sotto il contenuto */
+  background: linear-gradient(180deg, rgba(6,36,73,.70) 0%, rgba(6,36,73,.40) 45%, rgba(6,36,73,.22) 100%);
 }
-
 .hero-inner{
   position: relative;
+  z-index: 1; /* TESTO e avatar SOPRA la foto/velatura */
   display: grid;
   grid-template-columns: 160px 1fr 140px;
   gap: 16px;
@@ -106,7 +104,6 @@ a:hover{ color: var(--brand-blue-light); }
   padding: 18px;
   color: #fff;
 }
-
 .hero-inner .avatar{
   width:128px; height:128px; object-fit:cover;
   border-radius:50%;
@@ -114,7 +111,6 @@ a:hover{ color: var(--brand-blue-light); }
   box-shadow:0 6px 18px rgba(0,0,0,.25);
   transform: translateY(35%);
 }
-
 .hero-inner .right{
   display:flex; flex-direction:column; gap:10px; align-items:flex-end;
 }
@@ -124,26 +120,19 @@ a:hover{ color: var(--brand-blue-light); }
   padding:6px 8px; border-radius:8px;
   box-shadow: 0 1px 0 rgba(0,0,0,.05);
 }
-
-.hero-title{ margin: 0; font-size: 1.9rem; }
-.hero-subtitle{ margin: .35rem 0 0 0; }
+.hero-title{
+  margin: 0; font-size: 2rem; font-weight: 700; /* come HTML: bold */
+}
+.hero-subtitle{
+  margin: .35rem 0 0 0; font-size: 1rem; font-weight: 400;
+}
 
 /* Responsive */
 @media (max-width: 768px){
-  .hero-inner{
-    grid-template-columns: 100px 1fr;
-  }
+  .hero-inner{ grid-template-columns: 100px 1fr; }
   .hero-inner .right{ display:none; }
-  .hero-inner .avatar{
-    width:96px; height:96px; transform: translateY(30%);
-  }
+  .hero-inner .avatar{ width:96px; height:96px; transform: translateY(30%); }
 }
 
-/* =========================================================
-   NASCONDI COMPLETAMENTE LA RICERCA
-   ========================================================= */
-.md-header__button.md-icon[for="__search"],
-.md-search,
-.md-search__overlay{
-  display: none !important;
-}
+/* ====================== RICERCA: via del tutto ====================== */
+.md-header__button.md-icon[for="__search"], .md-search, .md-search__overlay{ display:none !important; }

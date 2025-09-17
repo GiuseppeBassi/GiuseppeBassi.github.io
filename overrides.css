@@ -27,7 +27,7 @@
 }
 
 :root{
-  --contacts-lift: 18px;   /* ↑ aumenta per alzare di più, ↓ diminuisci */
+  --contacts-lift: 38px;   /* ↑ aumenta per alzare di più, ↓ diminuisci */
 }
 
 /* alza solo i contatti rispetto alla baseline dell'overlay */

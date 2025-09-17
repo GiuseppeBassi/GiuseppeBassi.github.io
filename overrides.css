@@ -5,7 +5,7 @@
   --brand-blue-mid: #0b3a6d;    /* mid */
   --brand-blue-light: #1a5aa6;  /* light */
 
-  /* Map to Material */
+  /* Material mapping */
   --md-primary-fg-color: var(--brand-blue);
   --md-primary-fg-color--light: var(--brand-blue-light);
   --md-primary-fg-color--dark: var(--brand-blue);
@@ -16,20 +16,19 @@
   --md-code-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 
   /* Hero sizing */
-  --avatar-size: 128px;   /* cambia qui la dimensione dell’avatar */
+  --avatar-size: 150px;  /* leggermente più grande */
 }
 
-/* Tipografia globale */
 body, .md-typeset { font-family: var(--md-text-font); }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }
 
-/* ---------------------- BACKGROUND + CONTENT CARD ---------------------- */
+/* ---------------------- BACKGROUND & CARD ---------------------- */
 [data-md-color-scheme="default"] .md-main,
 [data-md-color-scheme="slate"] .md-main{
   background:
     repeating-linear-gradient(45deg, rgba(255,255,255,0.022) 0 2px, transparent 2px 8px),
     repeating-linear-gradient(-45deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px),
-    radial-gradient(circle at 50% 20%, rgba(26,90,166,0.25) 0%, rgba(11,58,109,0.20) 35%, rgba(6,36,73,0.35) 60%),
+    radial-gradient(circle at 50% 20%, rgba(26,90,166,0.10) 0%, rgba(11,58,109,0.08) 35%, rgba(6,36,73,0.12) 60%),
     linear-gradient(180deg, #0b3a6d 0%, #062449 60%, #062449 100%);
 }
 
@@ -41,7 +40,7 @@ body, .md-typeset { font-family: var(--md-text-font); }
   padding: .25rem .25rem 0 .25rem;
 }
 
-/* ---------------------- SIDEBARS ---------------------- */
+/* ---------------------- NAV/SIDEBAR ---------------------- */
 .md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__inner,
 .md-nav, .md-nav__list, .md-nav__item { background: #ffffff !important; }
@@ -60,7 +59,6 @@ a:hover{ color: var(--brand-blue-light); }
   background-color: var(--brand-blue-light);
   border-color: var(--brand-blue-light);
 }
-/* CTA */
 .md-typeset .md-button--xl{
   font-size: 1.08rem;
   padding: .78rem 1.25rem;
@@ -69,95 +67,99 @@ a:hover{ color: var(--brand-blue-light); }
 .top-cta{
   display:flex;
   justify-content:center;
-  margin: 12px 0 18px 0;
+  margin: 10px 0 14px 0; /* nessuna riga sopra */
 }
 
-/* ---------------------- TITOLO PAGINA (SOPRA IL LAGO) ---------------------- */
-.page-title { margin: 4px 2px 10px 2px; }
+/* ---------------------- PAGE TITLE ---------------------- */
+.page-title{
+  display: flex;
+  justify-content: center;   /* centrato */
+  margin: 6px 2px 12px 2px;
+}
 .page-title h1{
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
-  font-size: 32px;
-  color: #111;           /* Nero elegante */
+  font-size: 40px;           /* leggermente più grande */
+  color: #111;
   letter-spacing: .2px;
 }
-.page-title p{
-  margin: 4px 0 0 0;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #444;
-  font-size: 15px;
-}
 
-/* ---------------------- HERO: LAGO DI GARDA ---------------------- */
+/* ---------------------- HERO (Lago chiaro, nitido) ---------------------- */
 .hero-wrap{
   position: relative;
-  /* spazio sotto perché l'overlay esce dal lago del 25% */
-  margin-bottom: calc(0.60 * var(--avatar-size) + 18px);
+  /* spazio per la fascia sovrapposta (avatar esce 25%) */
+  margin-bottom: calc(0.25 * var(--avatar-size) + 12px);
 }
-
 .hero-lake{
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  min-height: 260px;
-  /* CSS e immagine sono in docs/ e docs/assets/ */
+  min-height: 280px;
   background-image: url("assets/Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
-  isolation: isolate; /* nuovo stacking context */
+  isolation: isolate;
 }
-/* overlay scuro per leggibilità */
-.hero-lake::after{
-  content:"";
-  position:absolute; inset:0;
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(6,36,73,.70) 0%, rgba(6,36,73,.40) 45%, rgba(6,36,73,.22) 100%);
-}
+/* NESSUN overlay scuro: vogliamo l'immagine chiara e nitida */
+/* Se volessi appena un tocco per contrasto:
+.hero-lake::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(255,255,255,.00), rgba(255,255,255,.00)); }
+*/
 
-/* ---------------------- OVERLAY STRIP a cavallo del bordo basso ---------------------- */
+/* ---------------------- OVERLAY STRIP (avatar + contatti + loghi) ---------------------- */
 .overlay-row{
   position: absolute;
   left: 18px; right: 18px;
   bottom: calc(-0.25 * var(--avatar-size));   /* 25% fuori dal lago */
   z-index: 2;
   display: grid;
-  grid-template-columns: var(--avatar-size) 1fr 160px;
+  grid-template-columns: var(--avatar-size) 1fr auto;
   gap: 16px;
   align-items: end;
-  color: #111;  /* Testo nero */
+  color: #111;
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Avatar QUADRATO */
+/* Avatar CIRCOLARE */
 .overlay-row .avatar{
   width: var(--avatar-size);
   height: var(--avatar-size);
   object-fit: cover;
-  border-radius: 12px;               /* quadrato smussato */
+  border-radius: 50%;              /* cerchio */
   border: 3px solid #fff;
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
 
-/* Sottotitolo in nero Georgia */
-.overlay-row .subtitle{
+/* Contatti vicino all’icona */
+.contacts{
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 8px;
-  font-size: 16px;
-  color: #111;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 15px;
 }
+.contacts a{
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.contacts a:hover{
+  text-decoration: underline;
+  border-bottom-color: #111;
+}
+.contacts .sep{ opacity: .65; }
 
-/* Colonna destra: loghi allineati in basso a destra */
+/* Loghi più grandi, affiancati */
 .overlay-row .right{
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-end;
   justify-content: flex-end;
   padding-bottom: 8px;
 }
 .overlay-row .right img{
-  height: 44px;
+  height: 64px;                  /* più grandi */
   object-fit: contain;
   background: transparent;
   padding: 0;
@@ -166,14 +168,16 @@ a:hover{ color: var(--brand-blue-light); }
   filter: none;
 }
 
-/* ---------------------- DIVISORIA ---------------------- */
-.section-divider{
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.08);
-  margin: 18px 0 10px 0;
+/* ---------------------- Sottotitolo subito sotto il lago ---------------------- */
+.headline-subtitle{
+  margin: 0.6rem 0 0.2rem 0;
+  text-align: center;
+  font-size: 16px;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-/* ---------------------- DOWNLOAD LINKS (notes) ---------------------- */
+/* ---------------------- NOTES: download link style (sezione notes) ---------------------- */
 .md-typeset a.download-link{
   color: #111;
   font-weight: 600;
@@ -189,15 +193,17 @@ a:hover{ color: var(--brand-blue-light); }
 
 /* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 768px){
-  :root{ --avatar-size: 100px; }
+  :root{ --avatar-size: 110px; }
   .overlay-row{
     grid-template-columns: var(--avatar-size) 1fr;
     right: 12px; left: 12px;
   }
-  .overlay-row .right{ display: none; } /* nascondi loghi su mobile */
+  .overlay-row .right{ display: none; } /* nascondi loghi su mobile per layout pulito */
+  .page-title h1{ font-size: 32px; }
+  .headline-subtitle{ font-size: 15px; }
 }
 
-/* ---------------------- RIMUOVI SEARCH (plugin disabilitato, ma nascondo l'UI) ---------------------- */
+/* ---------------------- NASCONDI UI SEARCH (se anche il plugin è off) ---------------------- */
 .md-header__button.md-icon[for="__search"],
 .md-search,
 .md-search__overlay{ display: none !important; }

@@ -220,7 +220,7 @@ a:hover{ color: var(--brand-blue-light); } */
 
 /* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 768px){
-  :root{ --avatar-size: 110px; }
+  :root{ --avatar-size: 110px; --overlay-drop: 24px; }
   .overlay-row{
     grid-template-columns: var(--avatar-size) 1fr;
     right: 12px; left: 12px;

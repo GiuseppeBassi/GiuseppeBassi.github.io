@@ -4,35 +4,39 @@ title: Home
 
 <div class="hero-lake">
   <div class="hero-inner">
-    <img class="avatar" src="assets/avatar.jpg" alt="Giuseppe Bassi" />
+    <!-- NOTE SU IMMAGINI:
+         - Converte "Giuseppe_Square.heic" in .jpg/.png/.webp (HEIC non è supportato dai browser).
+         - Salva ad es. assets/giuseppe-square.jpg -->
+    <img class="avatar" src="assets/giuseppe-square.jpg" alt="Giuseppe Bassi" />
     <div class="center">
       <h1 class="hero-title">Giuseppe Bassi</h1>
-      <p class="hero-subtitle">BSc in Mathematical & Computing Sciences for AI @ Bocconi — Presidente BAMS</p>
-      <div class="cta">
-        <a class="md-button md-button--primary" href="notes/">Vai ai materiali</a>
-        <a class="md-button" href="mailto:giuseppe.bassi2@studbocconi.it">Contattami</a>
-      </div>
+      <p class="hero-subtitle">Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University</p>
     </div>
     <div class="right">
       <img src="assets/Logo_Bocconi_2.svg" alt="Bocconi" title="Università Bocconi" />
-      <img src="assets/bams-logo.svg" alt="BAMS" title="BAMS" />
+      <!-- Rinomina "BAMS FINALE (1).png" in un nome senza spazi, es. bams-logo-final.png -->
+      <img src="assets/bams-logo-final.png" alt="BAMS" title="BAMS" />
     </div>
   </div>
+</div>
+
+<div class="top-cta">
+  <a class="md-button md-button--xl md-button--primary" href="notes/">Go to materials</a>
 </div>
 
 ---
 
 ## About me
-Sono Giuseppe, studente di BAI (Bocconi) e presidente di **BAMS**. Mi occupo di analisi, ottimizzazione, AI e didattica per le Olimpiadi di Matematica. Qui raccolgo i miei **appunti** e materiale di gara.
+I’m Giuseppe, BAI student at Bocconi and president of **BAMS**. I work on analysis, optimization, AI, and olympiad training. Here you’ll find my **notes** and contest materials.
 
 - 🎓 Exchange @ UofT (Aug–Dec 2025)
-- 🧠 Progetti: Hopfield su grafi, Optimal Transport a temperatura finita, D3PM guidati da LLM
-- 🏅 Olimpiadi: più medaglie a livello nazionale, coaching e handout
+- 🧠 Projects: Hopfield on graphs, finite-temperature Optimal Transport, LLM-guided D3PM
+- 🏅 Olympiads: multiple national medals; coach and author of handouts
 
-## Link utili
+## Useful links
 - ▶️ **YouTube**: [@bassigiuseppe](https://www.youtube.com/@bassigiuseppe)
 - 💼 **LinkedIn**: [giuseppe-bassi](https://www.linkedin.com/in/giuseppe-bassi/)
 - 📸 **Instagram**: [bassii.giuseppe](https://www.instagram.com/bassii.giuseppe/)
 - ✉️ **Email**: [giuseppe.bassi2@studbocconi.it](mailto:giuseppe.bassi2@studbocconi.it)
 
-> Il sito è minimale di proposito: home + materiali. Aggiungerò altro man mano che i contenuti crescono.
+> The site is intentionally minimal: home + materials. I’ll add more as content grows.

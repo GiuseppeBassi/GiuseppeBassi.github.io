@@ -1,5 +1,7 @@
 site_name: Giuseppe Bassi
 site_description: Appunti, Olimpiadi e materiale — Bocconi BAI
+# site_url: https://giuseppebassi.github.io/giuseppe-site/   # (opzionale: metti qui l’URL finale)
+
 nav:
   - Home: index.md
   - Notes / Materiali: notes.md
@@ -11,15 +13,18 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.footer
-    - content.action.edit
-    - content.code.copy
-    - content.tabs.link
     - header.autohide
     - toc.integrate
+    - content.code.copy
+    - content.tabs.link
     - search.suggest
     - search.highlight
   palette:
+    # Il tuo CSS definisce i colori → usiamo "custom" per entrambi gli schemi
     - scheme: default
+      primary: custom
+      accent: custom
+    - scheme: slate
       primary: custom
       accent: custom
   icon:

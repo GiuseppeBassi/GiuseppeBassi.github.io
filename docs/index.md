@@ -13,7 +13,7 @@
 
     <!-- Contatti vicino all’icona -->
     <div class="contacts">
-      <a href="mailto:giuseppe.bassi2@studbocconi.it">giuseppe.bassi2@studbocconi.it</a>
+      <a href="mailto:giuseppe.bassi2@studbocconi.it">Mail</a>
       <span class="sep">•</span>
       <a href="https://www.youtube.com/@bassigiuseppe" target="_blank" rel="noopener">YouTube</a>
       <span class="sep">•</span>
@@ -52,7 +52,7 @@ If you notice mistakes or have suggestions for improvement feel free to contact 
 
 ---
 
-### Other projects  
+## Other projects  
 
 - [YouTube Channel](https://www.youtube.com/@bassigiuseppe): an educational YouTube channel focused on Olympiad-level mathematics; unfortunately, it is in Italian and currently inactive due to lack of time.  
 - [BAMS – Bocconi Student Association for Mathematical Sciences](https://mathematicalsciencesbocconi.org/): I am the president of Bocconi's first math association, which aims to create a space where students can explore and develop a genuine interest in the mathematical sciences.  

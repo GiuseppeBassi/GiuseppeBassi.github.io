@@ -39,19 +39,20 @@
 <p class="top-cta">
   <a class="md-button md-button--primary md-button--xl" href="notes/">Material</a>
 </p>
+
 ---
 
-## About me
-I’m Giuseppe, BAI student at Bocconi and president of **BAMS**. I work on analysis, optimization, AI, and olympiad training. Here you’ll find my **notes** and contest materials.
+## About this site  
 
-- 🎓 Exchange @ UofT (Aug–Dec 2025)
-- 🧠 Projects: Hopfield on graphs, finite-temperature Optimal Transport, LLM-guided D3PM
-- 🏅 Olympiads: multiple national medals; coach and author of handouts
+I am Giuseppe Bassi, a Bachelor student in Mathematical and Computing Sciences for Artificial Intelligence at Bocconi University. My interests lie in mathematical analysis with applications to optimization, learning, and complex systems.  
 
-## Useful links
-- ▶️ **YouTube**: [@bassigiuseppe](https://www.youtube.com/@bassigiuseppe)
-- 💼 **LinkedIn**: [giuseppe-bassi](https://www.linkedin.com/in/giuseppe-bassi/)
-- 📸 **Instagram**: [bassii.giuseppe](https://www.instagram.com/bassii.giuseppe/)
-- ✉️ **Email**: [giuseppe.bassi2@studbocconi.it](mailto:giuseppe.bassi2@studbocconi.it)
+This website collects my university notes and some materials from Mathematical Olympiads, with more to come as the content grows.  
 
-> The site is intentionally minimal: home + materials. I’ll add more as content grows.
+If you notice mistakes or have suggestions for improvement feel free to contact me at [giuseppe.bassi2@studbocconi.it](mailto:giuseppe.bassi2@studbocconi.it).
+
+---
+
+### Other projects  
+
+- [YouTube Channel](https://www.youtube.com/@bassigiuseppe): an educational YouTube channel focused on Olympiad-level mathematics; unfortunately, it is in Italian and currently inactive due to lack of time.  
+- [BAMS – Bocconi Student Association for Mathematical Sciences](https://mathematicalsciencesbocconi.org/): I am the president of Bocconi's first math association, which aims to create a space where students can explore and develop a genuine interest in the mathematical sciences.  

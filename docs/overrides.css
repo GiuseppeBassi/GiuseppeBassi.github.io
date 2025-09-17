@@ -1,41 +1,39 @@
-/* ====================== BRAND + FONT ====================== */
+/* Font for hero title (Hebrew look → Heebo 700) */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
+
+/* ---------------------- BRAND & FONTS ---------------------- */
 :root{
+  /* Blues */
   --brand-blue: #062449;        /* dark */
   --brand-blue-mid: #0b3a6d;    /* mid */
   --brand-blue-light: #1a5aa6;  /* light */
 
-  --bams-green: #0a3d2d;
-  --bams-green-dark: #06291f;
-
+  /* Material color mapping */
   --md-primary-fg-color: var(--brand-blue);
   --md-primary-fg-color--light: var(--brand-blue-light);
   --md-primary-fg-color--dark: var(--brand-blue);
   --md-accent-fg-color: var(--brand-blue);
 
+  /* Typography */
   --md-text-font: Georgia, "Times New Roman", serif;
   --md-code-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-.md-typeset, body { font-family: var(--md-text-font); }
+body, .md-typeset { font-family: var(--md-text-font); }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }
 
-/* ====================== BACKGROUND + TEXTURE ======================
-   - Radiale chiara al centro + diagonali sottili come texture
-   - No nero/grigio in basso
-*/
+/* ---------------------- BACKGROUND + TEXTURE ---------------------- */
+/* Subtle crosshatch + radial glow + vertical blue gradient */
 [data-md-color-scheme="default"] .md-main,
 [data-md-color-scheme="slate"] .md-main{
   background:
-    /* texture incrociata molto leggera */
     repeating-linear-gradient(45deg, rgba(255,255,255,0.022) 0 2px, transparent 2px 8px),
     repeating-linear-gradient(-45deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px),
-    /* glow centrale */
     radial-gradient(circle at 50% 20%, rgba(26,90,166,0.25) 0%, rgba(11,58,109,0.20) 35%, rgba(6,36,73,0.35) 60%),
-    /* gradiente verticale blu */
     linear-gradient(180deg, #0b3a6d 0%, #062449 60%, #062449 100%);
 }
 
-/* Carta contenuti bianca (leggibile) */
+/* Content “paper” surface (always white) */
 [data-md-color-scheme="default"] .md-content,
 [data-md-color-scheme="slate"] .md-content{
   background: #ffffff;
@@ -44,59 +42,64 @@
   padding: .25rem .25rem 0 .25rem;
 }
 
-/* ====================== SIDEBAR SINISTRA BIANCA (LEGGIBILE) ====================== */
+/* ---------------------- SIDEBARS (READABLE) ---------------------- */
 .md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__inner,
 .md-nav, .md-nav__list, .md-nav__item {
   background: #ffffff !important;
 }
-.md-nav__link, .md-nav__item .md-nav__link{
-  color: #0f172a; /* blu-grigio scuro leggibile */
-}
-.md-nav__link:hover { color: var(--brand-blue-mid); }
-.md-sidebar--primary .md-nav__title { color: #0f172a; }
+.md-sidebar--secondary { background: #ffffff !important; } /* optional but consistent */
 
-/* ====================== BUTTONS ====================== */
+.md-nav__link, .md-nav__item .md-nav__link{ color: #0f172a; }
+.md-nav__link:hover { color: var(--brand-blue-mid); }
+
+/* Links hover (global) */
+a:hover{ color: var(--brand-blue-light); }
+
+/* ---------------------- BUTTONS (BLUE) ---------------------- */
 .md-typeset .md-button--primary{
-  background-color: var(--bams-green);
-  border-color: var(--bams-green);
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
   color: #fff;
 }
 .md-typeset .md-button--primary:hover{
-  background-color: var(--bams-green-dark);
-  border-color: var(--bams-green-dark);
+  background-color: var(--brand-blue-light);
+  border-color: var(--brand-blue-light);
 }
 
-/* CTA XL (sotto l'hero) */
+/* CTA under hero */
 .md-typeset .md-button--xl{
-  font-size: 1.05rem;
-  padding: .7rem 1.15rem;
-  border-radius: 10px;
+  font-size: 1.08rem;
+  padding: .78rem 1.25rem;
+  border-radius: 12px;
 }
 .top-cta{
-  display:flex; justify-content:center; margin: 12px 0 18px 0;
+  display:flex;
+  justify-content:center;
+  margin: 12px 0 18px 0;
 }
 
-/* ====================== HERO LAGO: layering e leggibilità ====================== */
+/* ---------------------- HERO: LAKE GARDA ---------------------- */
 .hero-lake{
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   min-height: 260px;
-  background-image: url("../assets/Lago_Di_Garda.jpg");
+  background-image: url("./Lago_Di_Garda.jpg"); /* CSS in assets/, image in assets/ */
   background-size: cover;
   background-position: center;
-  isolation: isolate; /* crea nuovo contesto per z-index */
+  isolation: isolate; /* new stacking context for safe layering */
 }
+/* Darker at top, fades toward center for readability */
 .hero-lake::after{
   content:"";
   position:absolute; inset:0;
-  z-index: 0; /* velatura sotto il contenuto */
+  z-index: 0;
   background: linear-gradient(180deg, rgba(6,36,73,.70) 0%, rgba(6,36,73,.40) 45%, rgba(6,36,73,.22) 100%);
 }
 .hero-inner{
   position: relative;
-  z-index: 1; /* TESTO e avatar SOPRA la foto/velatura */
+  z-index: 1; /* content above the image overlay */
   display: grid;
   grid-template-columns: 160px 1fr 140px;
   gap: 16px;
@@ -114,17 +117,29 @@
 .hero-inner .right{
   display:flex; flex-direction:column; gap:10px; align-items:flex-end;
 }
+/* Logos: no white aura */
 .hero-inner .right img{
-  height:48px; object-fit:contain;
-  background: rgba(255,255,255,.92);
-  padding:6px 8px; border-radius:8px;
-  box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  height:48px;
+  object-fit:contain;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
 }
+
+/* Title in “Hebrew” style (Heebo 700), white and bold */
 .hero-title{
-  margin: 0; font-size: 2rem; font-weight: 700; /* come HTML: bold */
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Heebo", Georgia, "Times New Roman", serif;
+  color: #fff;
 }
 .hero-subtitle{
-  margin: .35rem 0 0 0; font-size: 1rem; font-weight: 400;
+  margin: .35rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Responsive */
@@ -134,72 +149,28 @@
   .hero-inner .avatar{ width:96px; height:96px; transform: translateY(30%); }
 }
 
-/* ====================== RICERCA: via del tutto ====================== */
-.md-header__button.md-icon[for="__search"], .md-search, .md-search__overlay{ display:none !important; }
-
-
-/* ====================== FONT TITOLO: "Hebrew" (Heebo 700) ====================== */
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
-
-/* Applica Heebo solo al titolo hero */
-.hero-title{
-  font-family: "Heebo", Georgia, "Times New Roman", serif;
-  font-weight: 700;  /* bold */
-  color: #fff;       /* bianco */
-}
-
-/* ====================== BUTTONS — TUTTO BLU ====================== */
-/* Override: bottoni primari in blu, non più verdi */
-.md-typeset .md-button--primary{
-  background-color: var(--brand-blue);
-  border-color: var(--brand-blue);
-  color: #fff;
-}
-.md-typeset .md-button--primary:hover{
-  background-color: var(--brand-blue-light);
-  border-color: var(--brand-blue-light);
-}
-
-/* Dimensione maggiore per la CTA sotto il lago */
-.md-typeset .md-button--xl{
-  font-size: 1.08rem;
-  padding: .78rem 1.25rem;
-  border-radius: 12px;
-}
-
-/* ====================== HERO LOGHI — NIENTE "AURA" BIANCA ====================== */
-.hero-inner .right img{
-  height:48px; 
-  object-fit:contain;
-  /* via il box bianco e l'ombra: */
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  filter: none;
-}
-
-/* ====================== DOWNLOAD IN NOTES — SOLO TESTO NERO CLICCABILE ====================== */
-/* Usa una classe dedicata per i link download, così eviti i bottoni */
+/* ---------------------- NOTES: MINIMAL DOWNLOAD LINKS ---------------------- */
+/* Text-only download links (no big buttons) */
 .md-typeset a.download-link{
-  color: #111;                 /* nero */
-  font-weight: 600;            /* un filo più deciso */
-  text-decoration: none;       /* niente underline di default */
-  border-bottom: 1px solid transparent; /* micro-cue */
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 .md-typeset a.download-link:hover{
-  text-decoration: underline;  /* underline on hover */
+  text-decoration: underline;
   color: #111;
   border-bottom-color: #111;
 }
-
-/* iconcina material prima del testo (opzionale, se vuoi tenerla sottile) */
-.md-typeset .download-link .twiddle{ 
-  margin-right: .25rem; 
+/* Small icon span placed before the link */
+.md-typeset .twiddle{
+  margin-right: .25rem;
   opacity: .85;
 }
 
-/* ====================== LAYERING DELL'HERO (scritte SEMPRE sopra l'immagine) ====================== */
-.hero-lake{ isolation: isolate; }
-.hero-lake::after{ z-index: 0; }
-.hero-inner{ z-index: 1; position: relative; }
+/* ---------------------- REMOVE SEARCH UI COMPLETELY ---------------------- */
+.md-header__button.md-icon[for="__search"],
+.md-search,
+.md-search__overlay{
+  display: none !important;
+}

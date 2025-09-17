@@ -59,6 +59,6 @@ markdown_extensions:
       custom_checkbox: true
 
 extra_css:
-  - styles/overrides.css
+  - assets/overrides.css
 
 plugins: []

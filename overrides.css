@@ -14,13 +14,16 @@
   /* Typography */
   --md-text-font: Georgia, "Times New Roman", serif;
   --md-code-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Hero sizing */
+  --avatar-size: 128px;   /* cambia qui la dimensione dell’avatar */
 }
 
+/* Tipografia globale */
 body, .md-typeset { font-family: var(--md-text-font); }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }
 
-/* ---------------------- BACKGROUND + TEXTURE ---------------------- */
-/* Subtle crosshatch + radial glow + vertical blue gradient */
+/* ---------------------- BACKGROUND + CONTENT CARD ---------------------- */
 [data-md-color-scheme="default"] .md-main,
 [data-md-color-scheme="slate"] .md-main{
   background:
@@ -30,7 +33,6 @@ body, .md-typeset { font-family: var(--md-text-font); }
     linear-gradient(180deg, #0b3a6d 0%, #062449 60%, #062449 100%);
 }
 
-/* Content card: always white */
 [data-md-color-scheme="default"] .md-content,
 [data-md-color-scheme="slate"] .md-content{
   background: #ffffff;
@@ -39,21 +41,16 @@ body, .md-typeset { font-family: var(--md-text-font); }
   padding: .25rem .25rem 0 .25rem;
 }
 
-/* ---------------------- SIDEBARS (READABLE) ---------------------- */
+/* ---------------------- SIDEBARS ---------------------- */
 .md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__inner,
-.md-nav, .md-nav__list, .md-nav__item {
-  background: #ffffff !important;
-}
+.md-nav, .md-nav__list, .md-nav__item { background: #ffffff !important; }
 .md-sidebar--secondary { background: #ffffff !important; }
-
 .md-nav__link, .md-nav__item .md-nav__link{ color: #0f172a; }
 .md-nav__link:hover { color: var(--brand-blue-mid); }
-
-/* Global link hover tone */
 a:hover{ color: var(--brand-blue-light); }
 
-/* ---------------------- BUTTONS (BLUE) ---------------------- */
+/* ---------------------- BUTTONS ---------------------- */
 .md-typeset .md-button--primary{
   background-color: var(--brand-blue);
   border-color: var(--brand-blue);
@@ -63,8 +60,7 @@ a:hover{ color: var(--brand-blue-light); }
   background-color: var(--brand-blue-light);
   border-color: var(--brand-blue-light);
 }
-
-/* CTA under hero */
+/* CTA */
 .md-typeset .md-button--xl{
   font-size: 1.08rem;
   padding: .78rem 1.25rem;
@@ -76,108 +72,9 @@ a:hover{ color: var(--brand-blue-light); }
   margin: 12px 0 18px 0;
 }
 
-/* ---------------------- HERO: LAKE GARDA ---------------------- */
-.hero-lake{
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  min-height: 260px;
-  /* IMPORTANT: CSS file and image are both in docs/assets/ */
-  background-image: url("assets/Lago_Di_Garda.jpg");
-  background-size: cover;
-  background-position: center;
-  isolation: isolate; /* new stacking context for safe layering */
-}
-/* Darker at top, fades toward center for readability */
-.hero-lake::after{
-  content:"";
-  position:absolute; inset:0;
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(6,36,73,.70) 0%, rgba(6,36,73,.40) 45%, rgba(6,36,73,.22) 100%);
-}
-.hero-inner{
-  position: relative;
-  z-index: 1; /* content above the image overlay */
-  display: grid;
-  grid-template-columns: 160px 1fr 140px;
-  gap: 16px;
-  align-items: end;
-  padding: 18px;
-  color: #fff;
-}
-.hero-inner .avatar{
-  width:128px; height:128px; object-fit:cover;
-  border-radius:50%;
-  border:3px solid #fff;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
-  transform: translateY(35%);
-}
-.hero-inner .right{
-  display:flex; flex-direction:column; gap:10px; align-items:flex-end;
-}
-/* Logos: no white aura */
-.hero-inner .right img{
-  height:48px;
-  object-fit:contain;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  filter: none;
-}
-
-/* Title: Heebo 700 (Hebrew look), white and bold */
-.hero-title{
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: "Heebo", Georgia, "Times New Roman", serif;
-  color: #fff;
-}
-.hero-subtitle{
-  margin: .35rem 0 0 0;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-}
-
-/* Responsive */
-@media (max-width: 768px){
-  .hero-inner{ grid-template-columns: 100px 1fr; }
-  .hero-inner .right{ display:none; }
-  .hero-inner .avatar{ width:96px; height:96px; transform: translateY(30%); }
-}
-
-/* ---------------------- NOTES: TEXT-ONLY DOWNLOAD LINKS ---------------------- */
-.md-typeset a.download-link{
-  color: #111;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.md-typeset a.download-link:hover{
-  text-decoration: underline;
-  color: #111;
-  border-bottom-color: #111;
-}
-/* Small icon span placed before the link */
-.md-typeset .twiddle{
-  margin-right: .25rem;
-  opacity: .85;
-}
-
-/* ---------------------- REMOVE SEARCH UI COMPLETELY ---------------------- */
-.md-header__button.md-icon[for="__search"],
-.md-search,
-.md-search__overlay{
-  display: none !important;
-}
-
-/* ---------------------- PAGE TITLE SOPRA IL LAGO ---------------------- */
-.page-title {
-  margin: 4px 2px 10px 2px;
-}
-.page-title h1 {
+/* ---------------------- TITOLO PAGINA (SOPRA IL LAGO) ---------------------- */
+.page-title { margin: 4px 2px 10px 2px; }
+.page-title h1{
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
@@ -185,34 +82,32 @@ a:hover{ color: var(--brand-blue-light); }
   color: #111;           /* Nero elegante */
   letter-spacing: .2px;
 }
-.page-title p {
+.page-title p{
   margin: 4px 0 0 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #444;
   font-size: 15px;
 }
 
-/* ---------------------- WRAP HERO + OVERLAY STRIP ---------------------- */
-:root{
-  --avatar-size: 128px;   /* regola qui la dimensione */
-}
+/* ---------------------- HERO: LAGO DI GARDA ---------------------- */
 .hero-wrap{
   position: relative;
-  /* lasciamo spazio sotto perché l'overlay esce dal lago del 25% */
+  /* spazio sotto perché l'overlay esce dal lago del 25% */
   margin-bottom: calc(0.25 * var(--avatar-size) + 18px);
 }
 
-/* Hero (immagine lago) invariato, uso la tua classe esistente */
 .hero-lake{
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   min-height: 260px;
+  /* CSS e immagine sono in docs/ e docs/assets/ */
   background-image: url("assets/Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
-  isolation: isolate;
+  isolation: isolate; /* nuovo stacking context */
 }
+/* overlay scuro per leggibilità */
 .hero-lake::after{
   content:"";
   position:absolute; inset:0;
@@ -221,7 +116,6 @@ a:hover{ color: var(--brand-blue-light); }
 }
 
 /* ---------------------- OVERLAY STRIP a cavallo del bordo basso ---------------------- */
-/* Riga con avatar (75% sopra il bordo del lago, 25% fuori), testo, loghi */
 .overlay-row{
   position: absolute;
   left: 18px; right: 18px;
@@ -231,11 +125,11 @@ a:hover{ color: var(--brand-blue-light); }
   grid-template-columns: var(--avatar-size) 1fr 160px;
   gap: 16px;
   align-items: end;
-  color: #111;  /* Testo nero su sfondo lago */
+  color: #111;  /* Testo nero */
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Avatar QUADRATO con bordo bianco */
+/* Avatar QUADRATO */
 .overlay-row .avatar{
   width: var(--avatar-size);
   height: var(--avatar-size);
@@ -245,7 +139,7 @@ a:hover{ color: var(--brand-blue-light); }
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
 
-/* Testo accanto all'avatar (solo sottotitolo richiesto in nero Georgia) */
+/* Sottotitolo in nero Georgia */
 .overlay-row .subtitle{
   display: flex;
   align-items: flex-end;
@@ -272,7 +166,28 @@ a:hover{ color: var(--brand-blue-light); }
   filter: none;
 }
 
-/* Responsive */
+/* ---------------------- DIVISORIA ---------------------- */
+.section-divider{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+  margin: 18px 0 10px 0;
+}
+
+/* ---------------------- DOWNLOAD LINKS (notes) ---------------------- */
+.md-typeset a.download-link{
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.md-typeset a.download-link:hover{
+  text-decoration: underline;
+  color: #111;
+  border-bottom-color: #111;
+}
+.md-typeset .twiddle{ margin-right: .25rem; opacity: .85; }
+
+/* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 768px){
   :root{ --avatar-size: 100px; }
   .overlay-row{
@@ -282,19 +197,7 @@ a:hover{ color: var(--brand-blue-light); }
   .overlay-row .right{ display: none; } /* nascondi loghi su mobile */
 }
 
-/* ---------------------- DIVISORIA + BOTTONE "Material" ---------------------- */
-.section-divider{
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.08);
-  margin: 18px 0 10px 0;
-}
-.md-typeset .md-button--primary{
-  background-color: var(--brand-blue);
-  border-color: var(--brand-blue);
-  color: #fff;
-}
-.md-typeset .md-button--primary:hover{
-  background-color: var(--brand-blue-light);
-  border-color: var(--brand-blue-light);
-}
-
+/* ---------------------- RIMUOVI SEARCH (plugin disabilitato, ma nascondo l'UI) ---------------------- */
+.md-header__button.md-icon[for="__search"],
+.md-search,
+.md-search__overlay{ display: none !important; }

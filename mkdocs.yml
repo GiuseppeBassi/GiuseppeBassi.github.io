@@ -61,4 +61,4 @@ markdown_extensions:
 extra_css:
   - assets/overrides.css
 
-plugins: []
+plugins: []   # Disabilita completamente il plugin "search"

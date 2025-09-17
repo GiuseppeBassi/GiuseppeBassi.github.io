@@ -1,6 +1,3 @@
-/* Font for hero title */
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
-
 /* ---------------------- BRAND & FONTS ---------------------- */
 :root{
   /* Blues */
@@ -175,3 +172,129 @@ a:hover{ color: var(--brand-blue-light); }
 .md-search__overlay{
   display: none !important;
 }
+
+/* ---------------------- PAGE TITLE SOPRA IL LAGO ---------------------- */
+.page-title {
+  margin: 4px 2px 10px 2px;
+}
+.page-title h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #111;           /* Nero elegante */
+  letter-spacing: .2px;
+}
+.page-title p {
+  margin: 4px 0 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #444;
+  font-size: 15px;
+}
+
+/* ---------------------- WRAP HERO + OVERLAY STRIP ---------------------- */
+:root{
+  --avatar-size: 128px;   /* regola qui la dimensione */
+}
+.hero-wrap{
+  position: relative;
+  /* lasciamo spazio sotto perché l'overlay esce dal lago del 25% */
+  margin-bottom: calc(0.25 * var(--avatar-size) + 18px);
+}
+
+/* Hero (immagine lago) invariato, uso la tua classe esistente */
+.hero-lake{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 260px;
+  background-image: url("assets/Lago_Di_Garda.jpg");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+.hero-lake::after{
+  content:"";
+  position:absolute; inset:0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(6,36,73,.70) 0%, rgba(6,36,73,.40) 45%, rgba(6,36,73,.22) 100%);
+}
+
+/* ---------------------- OVERLAY STRIP a cavallo del bordo basso ---------------------- */
+/* Riga con avatar (75% sopra il bordo del lago, 25% fuori), testo, loghi */
+.overlay-row{
+  position: absolute;
+  left: 18px; right: 18px;
+  bottom: calc(-0.25 * var(--avatar-size));   /* 25% fuori dal lago */
+  z-index: 2;
+  display: grid;
+  grid-template-columns: var(--avatar-size) 1fr 160px;
+  gap: 16px;
+  align-items: end;
+  color: #111;  /* Testo nero su sfondo lago */
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Avatar QUADRATO con bordo bianco */
+.overlay-row .avatar{
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  object-fit: cover;
+  border-radius: 12px;               /* quadrato smussato */
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* Testo accanto all'avatar (solo sottotitolo richiesto in nero Georgia) */
+.overlay-row .subtitle{
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  font-size: 16px;
+  color: #111;
+}
+
+/* Colonna destra: loghi allineati in basso a destra */
+.overlay-row .right{
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 8px;
+}
+.overlay-row .right img{
+  height: 44px;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  :root{ --avatar-size: 100px; }
+  .overlay-row{
+    grid-template-columns: var(--avatar-size) 1fr;
+    right: 12px; left: 12px;
+  }
+  .overlay-row .right{ display: none; } /* nascondi loghi su mobile */
+}
+
+/* ---------------------- DIVISORIA + BOTTONE "Material" ---------------------- */
+.section-divider{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+  margin: 18px 0 10px 0;
+}
+.md-typeset .md-button--primary{
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+.md-typeset .md-button--primary:hover{
+  background-color: var(--brand-blue-light);
+  border-color: var(--brand-blue-light);
+}
+

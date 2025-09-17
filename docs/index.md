@@ -1,25 +1,35 @@
----
-title: Home
----
+<!-- TITOLO SOPRA L’IMMAGINE -->
+<div class="page-title">
+  <h1>Giuseppe Bassi</h1>
+  <p>BSc in Mathematical &amp; Computing Sciences for AI @ Bocconi — Presidente BAMS</p>
+</div>
 
-<div class="hero-lake">
-  <div class="hero-inner">
-    <img class="avatar" src="assets/Giuseppe_Square.jpg" alt="Giuseppe Bassi" />
-    <div class="center">
-      <h1 class="hero-title">Giuseppe Bassi</h1>
-      <p class="hero-subtitle">Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University</p>
+<!-- BLOCCO HERO + OVERLAY -->
+<div class="hero-wrap">
+  <div class="hero-lake" aria-label="Lake Garda background"></div>
+
+  <!-- Riga sovrapposta: avatar (75% dentro il lago, 25% fuori), sottotitolo nero Georgia, loghi a destra -->
+  <div class="overlay-row">
+    <img class="avatar" src="assets/avatar_square.jpg" alt="Giuseppe Bassi">
+
+    <div class="subtitle">
+      Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University
     </div>
+
     <div class="right">
-      <img src="assets/Logo_Bocconi_2.svg" alt="Bocconi" title="Università Bocconi" />
-      <img src="assets/LOGO_BAMS.png" alt="BAMS" title="BAMS" />
+      <!-- Usa l’ALTRO logo Bocconi (quello non lungo) + logo BAMS -->
+      <img src="assets/Logo_Bocconi_2.svg" alt="Bocconi">
+      <img src="assets/bams_logo.svg" alt="BAMS">
     </div>
   </div>
 </div>
 
-<div class="top-cta">
-  <a class="md-button md-button--xl md-button--primary" href="notes/">Go to materials</a>
-</div>
+<hr class="section-divider">
 
+<!-- CTA sotto la riga divisoria -->
+<p class="top-cta" style="margin-top:6px;">
+  <a class="md-button md-button--primary md-button--xl" href="notes/">Material</a>
+</p>
 ---
 
 ## About me

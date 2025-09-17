@@ -56,3 +56,7 @@ If you notice mistakes or have suggestions for improvement feel free to contact 
 
 - [YouTube Channel](https://www.youtube.com/@bassigiuseppe): an educational YouTube channel focused on Olympiad-level mathematics (in Italian, currently inactive due to lack of time).
 - [BAMS – Bocconi Student Association for Mathematical Sciences](https://mathematicalsciencesbocconi.org/): I am the founder and president of Bocconi's first math association, which aims to create a space where students can explore and develop a genuine interest in the mathematical sciences.
+
+<p style="font-size: 0.8em; color: #666; text-align: center;">
+Background photo of Lake Garda by <a href="https://commons.wikimedia.org/wiki/User:Wolfgang_Moroder" target="_blank">Wolfgang Moroder</a>, used under CC BY-SA 3.0.
+</p>

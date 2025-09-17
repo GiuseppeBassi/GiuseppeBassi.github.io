@@ -1,0 +1,46 @@
+/* Palette personalizzata "verde BAMS" */
+:root {
+/* Cambia qui per regolare il verde primario */
+--md-primary-fg-color: #00BFA5; /* verde principale */
+--md-primary-fg-color--light: #4DDDCB; /* variante chiara */
+--md-primary-fg-color--dark: #009E8A; /* variante scura */
+--md-accent-fg-color: #00BFA5;
+}
+
+
+/* Bottoni primari sempre in verde */
+.md-typeset .md-button--primary {
+background-color: var(--md-primary-fg-color);
+border-color: var(--md-primary-fg-color);
+}
+.md-typeset .md-button--primary:hover {
+background-color: var(--md-primary-fg-color--dark);
+border-color: var(--md-primary-fg-color--dark);
+}
+
+
+/* Link hover in verde (discreto) */
+a:hover { color: var(--md-primary-fg-color--dark); }
+
+
+/* Piccole rifiniture per la hero */
+.hero {
+display: grid;
+grid-template-columns: 120px 1fr 120px;
+gap: 16px;
+align-items: center;
+padding: 1.25rem;
+border-radius: 14px;
+background: linear-gradient(135deg, #0A0A0A 0%, #121212 100%);
+color: #F4F4F4;
+}
+.hero .left img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid #1f1f1f; }
+.hero .right img { height: 54px; object-fit: contain; filter: none; }
+.hero .cta .md-button { margin-right: .5rem; }
+
+
+/* Se vuoi mostrarla anche in tema chiaro */
+[data-md-color-scheme="default"] .hero {
+background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+color: #111;
+}

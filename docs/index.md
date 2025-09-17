@@ -1,33 +1,42 @@
-<!-- TITOLO SOPRA L’IMMAGINE -->
+<!-- TITOLO CENTRATO E GRANDE (senza sottotitolo) -->
 <div class="page-title">
   <h1>Giuseppe Bassi</h1>
-  <p>BSc in Mathematical &amp; Computing Sciences for AI @ Bocconi — Presidente BAMS</p>
 </div>
 
-<!-- BLOCCO HERO + OVERLAY -->
+<!-- HERO + OVERLAY (avatar, contatti, loghi) -->
 <div class="hero-wrap">
   <div class="hero-lake" aria-label="Lake Garda background"></div>
 
-  <!-- Riga sovrapposta: avatar (75% dentro il lago, 25% fuori), sottotitolo nero Georgia, loghi a destra -->
   <div class="overlay-row">
+    <!-- Avatar circolare, leggermente più grande -->
     <img class="avatar" src="assets/Giuseppe_Square.jpg" alt="Giuseppe Bassi">
 
-    <div class="subtitle">
-      Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University
+    <!-- Contatti vicino all’icona -->
+    <div class="contacts">
+      <a href="mailto:giuseppe.bassi2@studbocconi.it">giuseppe.bassi2@studbocconi.it</a>
+      <span class="sep">•</span>
+      <a href="https://www.youtube.com/@bassigiuseppe" target="_blank" rel="noopener">YouTube</a>
+      <span class="sep">•</span>
+      <a href="https://www.linkedin.com/in/giuseppe-bassi/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">•</span>
+      <a href="https://www.instagram.com/bassii.giuseppe/" target="_blank" rel="noopener">Instagram</a>
     </div>
 
+    <!-- Loghi (più grandi), uno accanto all’altro -->
     <div class="right">
-      <!-- Usa il logo Bocconi 1 (non quello lungo) + logo BAMS -->
       <img src="assets/Logo_Bocconi_1.png" alt="Bocconi">
       <img src="assets/LOGO_BAMS.png" alt="BAMS">
     </div>
   </div>
 </div>
 
-<hr class="section-divider">
+<!-- Sottotitolo in stile LinkedIn: subito sotto il lago, non sovrapposto -->
+<p class="headline-subtitle">
+  Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University
+</p>
 
-<!-- CTA sotto la riga divisoria -->
-<p class="top-cta" style="margin-top:6px;">
+<!-- CTA immediatamente sotto, senza riga di separazione -->
+<p class="top-cta">
   <a class="md-button md-button--primary md-button--xl" href="notes/">Material</a>
 </p>
 ---

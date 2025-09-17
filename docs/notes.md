@@ -1,5 +1,5 @@
-**Download**
-[:material-download: Download the PDF](FILE.pdf){ .md-button .md-button--primary }
+**Download**  
+<span class="twiddle">:material-download:</span> [Download the PDF](BAI_DecisionTheory_Appunti_v2025-09.pdf){ .download-link }
 
 ---
 
@@ -13,7 +13,7 @@ Invariants, extrema, double counting. Commented problems.
 Add the “probability gadgets” section.
 
 **Download**  
-[:material-download: Download the PDF](OLI_Combinatoria_Trucchi_v2024-11.pdf){ .md-button .md-button--primary }
+<span class="twiddle">:material-download:</span> [Download the PDF](BAI_DecisionTheory_Appunti_v2025-09.pdf){ .download-link }
 
 <!-- …prosegui traducendo Description / Notes / Download negli altri blocchi -->
 

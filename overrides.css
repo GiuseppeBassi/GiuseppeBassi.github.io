@@ -26,6 +26,16 @@
   --overhang: calc(0.25 * var(--avatar-size) + var(--overhang-extra));
 }
 
+:root{
+  --contacts-lift: 18px;   /* ↑ aumenta per alzare di più, ↓ diminuisci */
+}
+
+/* alza solo i contatti rispetto alla baseline dell'overlay */
+.contacts{
+  transform: translateY(calc(-1 * var(--contacts-lift)));
+  padding-bottom: 0; /* togli il peso in basso che li teneva giù */
+}
+
 /* Font applicati */
 body, .md-typeset { font-family: var(--md-text-font); }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: .2px; }

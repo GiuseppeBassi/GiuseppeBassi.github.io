@@ -58,6 +58,15 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+extra:
+  footer: |
+    <p style="font-size: 0.5em; color: #aaa; text-align: center;">
+      Background photo: 
+      <a href="https://en.wikipedia.org/wiki/Lake_Garda#/media/File:Golfo_di_Manerba_Isola_San_Biagio_Isola_del_Garda_Golfo_di_Sal%C3%B2_Lago_di_Garda.jpg" target="_blank" style="color: #aaa;">
+        Lake Garda by Wolfgang Moroder (CC BY-SA 3.0)
+      </a>
+    </p>
+
 extra_css:
   - overrides.css
 

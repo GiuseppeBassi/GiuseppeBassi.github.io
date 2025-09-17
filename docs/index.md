@@ -3,25 +3,23 @@ title: Home
 ---
 
 
-<!-- HERO con tua foto + loghi Bocconi e BAMS -->
 <div class="hero">
-<div class="left">
-<img src="assets/profile.jpg" alt="Giuseppe Bassi" />
+  <div class="left">
+    <img src="assets/Lago_Di_Garda.jpg" alt="Giuseppe Bassi" />
+  </div>
+  <div class="center">
+    <h1 style="margin:0">Giuseppe Bassi</h1>
+    <p style="margin:.25rem 0 0 0">BSc in Mathematical & Computing Sciences for AI @ Bocconi — Presidente BAMS</p>
+    <div class="cta" style="margin-top:.75rem">
+      <a class="md-button md-button--primary" href="notes/">Vai ai materiali</a>
+      <a class="md-button" href="mailto:giuseppe.bassi2@studbocconi.it">Contattami</a>
+    </div>
+  </div>
+  <div class="right" style="display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center">
+    <img src="assets/Logo_Bocconi_2.svg" alt="Bocconi" title="Università Bocconi" />
+    <img src="assets/bams-logo.svg" alt="BAMS" title="BAMS" /> <!-- caricalo appena puoi -->
+  </div>
 </div>
-<div class="center">
-<h1 style="margin:0">Giuseppe Bassi</h1>
-<p style="margin:.25rem 0 0 0">BSc in Mathematical & Computing Sciences for AI @ Bocconi — Presidente BAMS</p>
-<div class="cta" style="margin-top:.75rem">
-<a class="md-button md-button--primary" href="notes/">Vai ai materiali</a>
-<a class="md-button" href="mailto:giuseppe.bassi2@studbocconi.it">Contattami</a>
-</div>
-</div>
-<div class="right" style="display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center">
-<img src="assets/bocconi-logo.svg" alt="Bocconi" title="Università Bocconi" />
-<img src="assets/bams-logo.svg" alt="BAMS" title="BAMS" />
-</div>
-</div>
-
 
 ---
 

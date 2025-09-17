@@ -42,5 +42,66 @@ color: #F4F4F4;
 /* Se vuoi mostrarla anche in tema chiaro */
 [data-md-color-scheme="default"] .hero {
 background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+/* --- HERO stile LinkedIn --- */
+.hero-lake{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 220px;
+  background-image: url("../assets/Lago_Di_Garda.jpg"); /* sfondo lago */
+  background-size: cover;
+  background-position: center;
+}
+
+/* leggera velatura per leggibilità del testo */
+.hero-lake::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.15));
+}
+
+.hero-inner{
+  position: relative; /* sopra la velatura */
+  display: grid;
+  grid-template-columns: 160px 1fr 140px;
+  gap: 16px;
+  align-items: end;
+  padding: 16px;
+  color: #f4f4f4;
+}
+
+/* avatar che “sborda” leggermente sullo sfondo */
+.hero-inner .avatar{
+  width: 128px; height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transform: translateY(35%);   /* sovrapposizione tipo LinkedIn */
+}
+
+/* colonna destra con loghi impilati */
+.hero-inner .right{
+  display:flex; flex-direction:column; gap:10px; align-items:flex-end;
+}
+.hero-inner .right img{
+  height: 48px; object-fit: contain; filter: none; background: rgba(255,255,255,.85);
+  padding: 6px 8px; border-radius: 8px;
+}
+
+/* versione chiara (se l'utente forza tema chiaro) */
+[data-md-color-scheme="default"] .hero-lake::after{
+  background: linear-gradient(0deg, rgba(255,255,255,.15), rgba(255,255,255,.0));
+}
+
+/* responsive */
+@media (max-width: 768px){
+  .hero-inner{
+    grid-template-columns: 100px 1fr; /* nascondi momentaneamente la colonna destra */
+  }
+  .hero-inner .right{ display:none; }
+  .hero-inner .avatar{ width: 96px; height: 96px; transform: translateY(30%); }
+}
 color: #111;
 }

@@ -86,7 +86,7 @@ a:hover{ color: var(--brand-blue-light); }
   overflow: hidden;
   min-height: 260px;
   /* IMPORTANT: CSS file and image are both in docs/assets/ */
-  background-image: url("./Lago_Di_Garda.jpg");
+  background-image: url("assets/Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
   isolation: isolate; /* new stacking context for safe layering */

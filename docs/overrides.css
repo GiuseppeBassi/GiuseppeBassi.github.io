@@ -17,6 +17,7 @@
 
   /* Hero sizing */
   --avatar-size: 150px;  /* leggermente più grande */
+  --overlay-drop: 38px;
 }
 
 body, .md-typeset { font-family: var(--md-text-font); }
@@ -197,11 +198,16 @@ a:hover{ color: var(--brand-blue-light); } */
 
 /* ---------------------- Sottotitolo subito sotto il lago ---------------------- */
 .headline-subtitle{
-  margin: 0.6rem 0 0.2rem 0;
+  margin: calc(0.6rem + var(--overlay-drop)) 0 0.2rem 0;
   text-align: center;
   font-size: 16px;
   color: #111;
   font-family: Georgia, "Times New Roman", serif;
+  max-width: 72ch;         /* forza il wrapping gradevole */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 12px;         /* un filo di respiro ai lati */
+  text-wrap: balance;      /* wrap più “bello” se supportato */
 }
 
 /* ---------------------- NOTES: download link style (sezione notes) ---------------------- */

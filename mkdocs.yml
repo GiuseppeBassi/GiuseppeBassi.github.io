@@ -59,6 +59,6 @@ markdown_extensions:
       custom_checkbox: true
 
 extra_css:
-  - assets/overrides.css
+  - overrides.css
 
 plugins: []   # Disabilita completamente il plugin "search"

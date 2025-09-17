@@ -93,7 +93,7 @@ a:hover{ color: var(--brand-blue-light); }
 .hero-wrap{
   position: relative;
   /* spazio sotto perché l'overlay esce dal lago del 25% */
-  margin-bottom: calc(0.25 * var(--avatar-size) + 18px);
+  margin-bottom: calc(0.40 * var(--avatar-size) + 18px);
 }
 
 .hero-lake{

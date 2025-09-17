@@ -41,13 +41,40 @@ body, .md-typeset { font-family: var(--md-text-font); }
 }
 
 /* ---------------------- NAV/SIDEBAR ---------------------- */
-.md-sidebar--primary,
+/*.md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__inner,
 .md-nav, .md-nav__list, .md-nav__item { background: #ffffff !important; }
 .md-sidebar--secondary { background: #ffffff !important; }
 .md-nav__link, .md-nav__item .md-nav__link{ color: #0f172a; }
 .md-nav__link:hover { color: var(--brand-blue-mid); }
-a:hover{ color: var(--brand-blue-light); }
+a:hover{ color: var(--brand-blue-light); } */
+
+/* --- Uniforma aspetto voce attiva/hover in nav primaria e TOC --- */
+.md-nav__link[aria-current],
+.md-nav__link--active {
+  background: transparent !important;        /* niente “pill” largo */
+}
+
+.md-nav__link,
+.md-nav__item .md-nav__link {
+  border-left: 3px solid transparent;
+  padding-left: calc(0.6rem - 3px);          /* compensa il bordo */
+}
+
+/* Active + Hover con stesso accento in entrambe le sidebar */
+.md-nav__link[aria-current="page"],
+.md-nav__link--active,
+.md-nav__link:hover {
+  border-left-color: var(--brand-blue);
+  color: var(--brand-blue-mid);
+  background: transparent !important;
+}
+
+/* TOC (nav secondaria) allinea padding e rimuove differenze di larghezza */
+.md-sidebar--secondary .md-nav__list,
+.md-sidebar--secondary .md-nav__item { 
+  background: transparent !important; 
+}
 
 /* ---------------------- BUTTONS ---------------------- */
 .md-typeset .md-button--primary{

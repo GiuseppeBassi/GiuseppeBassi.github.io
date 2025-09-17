@@ -136,3 +136,70 @@
 
 /* ====================== RICERCA: via del tutto ====================== */
 .md-header__button.md-icon[for="__search"], .md-search, .md-search__overlay{ display:none !important; }
+
+
+/* ====================== FONT TITOLO: "Hebrew" (Heebo 700) ====================== */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
+
+/* Applica Heebo solo al titolo hero */
+.hero-title{
+  font-family: "Heebo", Georgia, "Times New Roman", serif;
+  font-weight: 700;  /* bold */
+  color: #fff;       /* bianco */
+}
+
+/* ====================== BUTTONS — TUTTO BLU ====================== */
+/* Override: bottoni primari in blu, non più verdi */
+.md-typeset .md-button--primary{
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+.md-typeset .md-button--primary:hover{
+  background-color: var(--brand-blue-light);
+  border-color: var(--brand-blue-light);
+}
+
+/* Dimensione maggiore per la CTA sotto il lago */
+.md-typeset .md-button--xl{
+  font-size: 1.08rem;
+  padding: .78rem 1.25rem;
+  border-radius: 12px;
+}
+
+/* ====================== HERO LOGHI — NIENTE "AURA" BIANCA ====================== */
+.hero-inner .right img{
+  height:48px; 
+  object-fit:contain;
+  /* via il box bianco e l'ombra: */
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+/* ====================== DOWNLOAD IN NOTES — SOLO TESTO NERO CLICCABILE ====================== */
+/* Usa una classe dedicata per i link download, così eviti i bottoni */
+.md-typeset a.download-link{
+  color: #111;                 /* nero */
+  font-weight: 600;            /* un filo più deciso */
+  text-decoration: none;       /* niente underline di default */
+  border-bottom: 1px solid transparent; /* micro-cue */
+}
+.md-typeset a.download-link:hover{
+  text-decoration: underline;  /* underline on hover */
+  color: #111;
+  border-bottom-color: #111;
+}
+
+/* iconcina material prima del testo (opzionale, se vuoi tenerla sottile) */
+.md-typeset .download-link .twiddle{ 
+  margin-right: .25rem; 
+  opacity: .85;
+}
+
+/* ====================== LAYERING DELL'HERO (scritte SEMPRE sopra l'immagine) ====================== */
+.hero-lake{ isolation: isolate; }
+.hero-lake::after{ z-index: 0; }
+.hero-inner{ z-index: 1; position: relative; }

@@ -1,5 +1,5 @@
 **Download**
-[:material-download: Download the PDF](BAI_DecisionTheory_Appunti_v2025-09.pdf){ .md-button .md-button--primary }
+[:material-download: Download the PDF](FILE.pdf){ .md-button .md-button--primary }
 
 ---
 
@@ -16,3 +16,4 @@ Add the “probability gadgets” section.
 [:material-download: Download the PDF](OLI_Combinatoria_Trucchi_v2024-11.pdf){ .md-button .md-button--primary }
 
 <!-- …prosegui traducendo Description / Notes / Download negli altri blocchi -->
+

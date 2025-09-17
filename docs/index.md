@@ -10,16 +10,16 @@
 
   <!-- Riga sovrapposta: avatar (75% dentro il lago, 25% fuori), sottotitolo nero Georgia, loghi a destra -->
   <div class="overlay-row">
-    <img class="avatar" src="assets/avatar_square.jpg" alt="Giuseppe Bassi">
+    <img class="avatar" src="assets/Giuseppe_Square.jpg" alt="Giuseppe Bassi">
 
     <div class="subtitle">
       Bachelor Student of Mathematical and Computing Sciences for AI at Bocconi University
     </div>
 
     <div class="right">
-      <!-- Usa l’ALTRO logo Bocconi (quello non lungo) + logo BAMS -->
-      <img src="assets/Logo_Bocconi_2.svg" alt="Bocconi">
-      <img src="assets/bams_logo.svg" alt="BAMS">
+      <!-- Usa il logo Bocconi 1 (non quello lungo) + logo BAMS -->
+      <img src="assets/Logo_Bocconi_1.png" alt="Bocconi">
+      <img src="assets/LOGO_BAMS.png" alt="BAMS">
     </div>
   </div>
 </div>

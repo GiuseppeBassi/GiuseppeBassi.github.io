@@ -1,13 +1,13 @@
 site_name: Giuseppe Bassi
-site_description: Appunti, Olimpiadi e materiale — Bocconi BAI
+site_description: Notes, Olympiad materials — Bocconi BAI
 
 nav:
   - Home: index.md
-  - Notes / Materiali: notes.md
+  - Notes / Materials: notes.md
 
 theme:
   name: material
-  language: it
+  language: en
   features:
     - navigation.tabs
     - navigation.top

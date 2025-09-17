@@ -138,7 +138,7 @@ a:hover{ color: var(--brand-blue-light); } */
 .overlay-row{
   position: absolute;
   left: 18px; right: 18px;
-  bottom: calc(-0.25 * var(--avatar-size));   /* 25% fuori dal lago */
+  bottom: calc(-0.25 * var(--avatar-size) - var(--overlay-drop));
   z-index: 2;
   display: grid;
   grid-template-columns: var(--avatar-size) 1fr auto;

@@ -1,4 +1,4 @@
-/* Font for hero title (Hebrew look → Heebo 700) */
+/* Font for hero title */
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
 
 /* ---------------------- BRAND & FONTS ---------------------- */
@@ -8,7 +8,7 @@
   --brand-blue-mid: #0b3a6d;    /* mid */
   --brand-blue-light: #1a5aa6;  /* light */
 
-  /* Material color mapping */
+  /* Map to Material */
   --md-primary-fg-color: var(--brand-blue);
   --md-primary-fg-color--light: var(--brand-blue-light);
   --md-primary-fg-color--dark: var(--brand-blue);
@@ -33,7 +33,7 @@ body, .md-typeset { font-family: var(--md-text-font); }
     linear-gradient(180deg, #0b3a6d 0%, #062449 60%, #062449 100%);
 }
 
-/* Content “paper” surface (always white) */
+/* Content card: always white */
 [data-md-color-scheme="default"] .md-content,
 [data-md-color-scheme="slate"] .md-content{
   background: #ffffff;
@@ -48,12 +48,12 @@ body, .md-typeset { font-family: var(--md-text-font); }
 .md-nav, .md-nav__list, .md-nav__item {
   background: #ffffff !important;
 }
-.md-sidebar--secondary { background: #ffffff !important; } /* optional but consistent */
+.md-sidebar--secondary { background: #ffffff !important; }
 
 .md-nav__link, .md-nav__item .md-nav__link{ color: #0f172a; }
 .md-nav__link:hover { color: var(--brand-blue-mid); }
 
-/* Links hover (global) */
+/* Global link hover tone */
 a:hover{ color: var(--brand-blue-light); }
 
 /* ---------------------- BUTTONS (BLUE) ---------------------- */
@@ -85,7 +85,8 @@ a:hover{ color: var(--brand-blue-light); }
   border-radius: 16px;
   overflow: hidden;
   min-height: 260px;
-  background-image: url("./Lago_Di_Garda.jpg"); /* CSS in assets/, image in assets/ */
+  /* IMPORTANT: CSS file and image are both in docs/assets/ */
+  background-image: url("./Lago_Di_Garda.jpg");
   background-size: cover;
   background-position: center;
   isolation: isolate; /* new stacking context for safe layering */
@@ -128,7 +129,7 @@ a:hover{ color: var(--brand-blue-light); }
   filter: none;
 }
 
-/* Title in “Hebrew” style (Heebo 700), white and bold */
+/* Title: Heebo 700 (Hebrew look), white and bold */
 .hero-title{
   margin: 0;
   font-size: 2rem;
@@ -140,6 +141,7 @@ a:hover{ color: var(--brand-blue-light); }
   margin: .35rem 0 0 0;
   font-size: 1rem;
   font-weight: 400;
+  color: #fff;
 }
 
 /* Responsive */
@@ -149,8 +151,7 @@ a:hover{ color: var(--brand-blue-light); }
   .hero-inner .avatar{ width:96px; height:96px; transform: translateY(30%); }
 }
 
-/* ---------------------- NOTES: MINIMAL DOWNLOAD LINKS ---------------------- */
-/* Text-only download links (no big buttons) */
+/* ---------------------- NOTES: TEXT-ONLY DOWNLOAD LINKS ---------------------- */
 .md-typeset a.download-link{
   color: #111;
   font-weight: 600;

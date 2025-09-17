@@ -207,3 +207,21 @@ a:hover{ color: var(--brand-blue-light); }
 .md-header__button.md-icon[for="__search"],
 .md-search,
 .md-search__overlay{ display: none !important; }
+
+/* --- Credito foto nel footer, piccolo e poco invasivo --- */
+.md-footer, .md-footer a { color: rgba(255,255,255,.75); }
+.wm-credit{
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  opacity: .75;
+}
+.wm-credit a{
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.wm-credit a:hover{
+  text-decoration: underline;
+  border-bottom-color: currentColor;
+}
+

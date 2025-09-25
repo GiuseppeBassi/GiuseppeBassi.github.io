@@ -11,7 +11,7 @@ Personal lecture notes from the BSc in Mathematical & Computing Sciences for AI 
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
 
-    <a class="download-link" href="assets/DIFFERENTIAL_GEOMETRY.pdf" download>Download *Differential Geometry*</a>
+   <a class="download-link" href="../assets/DIFFERENTIAL_GEOMETRY.pdf" download>Download *Differential Geometry*</a>
 
 ???+ info "Analysis 1"
     **Description**  
@@ -20,7 +20,7 @@ Personal lecture notes from the BSc in Mathematical & Computing Sciences for AI 
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
 
-    <a class="download-link" href="assets/ANALYSIS_1.pdf" download>Download *Analysis 1*</a>
+   <a class="download-link" href="../assets/ANALYSIS_1.pdf" download>Download *Analysis 1*</a>
 
 ???+ info "Decision Theory"
     **Description**  
@@ -29,7 +29,7 @@ Personal lecture notes from the BSc in Mathematical & Computing Sciences for AI 
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
  
-    <a class="download-link" href="assets/DECISION_THEORY.pdf" download>Download *Decision Theory*</a>
+   <a class="download-link" href="../assets/DECISION_THEORY.pdf" download>Download *Decision Theory*</a>
 
 !!! tip "Coming soon"
     - Physics 1  
@@ -50,9 +50,7 @@ Some handouts I curated during my Olympiad period.
     **Notes & Updates**  
     - **Current version:** 13 Apr 2025    
 
-    <a class="download-link" href="assets/COMPLEX_ROOTS_OF_UNITY_IN_MATH_OLYMPIADS.pdf" download>
-      Download *Complex Roots of Unity in Math Olympiads*
-    </a>
+    <a class="download-link" href="../assets/COMPLEX_ROOTS_OF_UNITY_IN_MATH_OLYMPIADS.pdf" download>
 
 !!! tip "Coming soon"
     More Olympiad material is coming — stay tuned.

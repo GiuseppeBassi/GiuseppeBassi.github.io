@@ -6,7 +6,7 @@ Personal lecture notes from the BSc in Mathematical & Computing Sciences for AI 
 
 ???+ info "Differential Geometry"
     **Description**  
-    Introductory notes on submanifolds in $\mathbb{R}^n$. I added some extra material (e.g. Fenchel  Transform).
+    Introductory notes on submanifolds in R^n. I added some extra material (e.g. Fenchel  Transform).
 
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  

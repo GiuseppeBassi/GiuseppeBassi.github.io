@@ -25,7 +25,7 @@ theme:
       accent: custom
   icon:
     logo: material/account-circle
-    repo: fontawesome/brands/github
+    # repo: fontawesome/brands/github  # ← Riattiva per mostrare l'icona GitHub in header (richiede repo_url sotto)
 
 # ⚠️ Unisci tutto in un SOLO blocco 'extra'
 extra:
@@ -50,9 +50,15 @@ extra:
       </a>
     </div>
 
-repo_url: https://github.com/GiuseppeBassi
-repo_name: GiuseppeBassi
-edit_uri: ""
+# --- Link al repository GitHub (DISABILITATO) ---------------------------------
+# Per mostrare il link al repo (e l'icona in header), togli i # da repo_url/repo_name
+# e riattiva anche 'theme.icon.repo' sopra.
+# repo_url: https://github.com/GiuseppeBassi
+# repo_name: GiuseppeBassi
+# edit_uri: edit/main/docs/   # Opzionale: abilita "Edit this page" indicando il path corretto
+# ------------------------------------------------------------------------------
+
+edit_uri: ""  # Lascia vuoto per NON mostrare "Edit this page"
 
 markdown_extensions:
   - admonition

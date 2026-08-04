@@ -1,5 +1,5 @@
 site_name: Giuseppe Bassi
-site_description: Notes, Olympiad materials — Bocconi BAI
+site_description: Notes in probability, analysis, optimization, and mathematical olympiads
 
 nav:
   - Home: index.md
@@ -25,9 +25,7 @@ theme:
       accent: custom
   icon:
     logo: material/account-circle
-    # repo: fontawesome/brands/github  # ← Riattiva per mostrare l'icona GitHub in header (richiede repo_url sotto)
 
-# ⚠️ Unisci tutto in un SOLO blocco 'extra'
 extra:
   social:
     - icon: fontawesome/brands/youtube
@@ -40,7 +38,7 @@ extra:
       link: https://www.instagram.com/bassii.giuseppe/
       name: Instagram
     - icon: material/email
-      link: mailto:giuseppe.bassi2@studbocconi.it
+      link: mailto:giuseppe.bassi@princeton.edu
       name: Email
   footer: |
     <div class="wm-credit">
@@ -50,15 +48,7 @@ extra:
       </a>
     </div>
 
-# --- Link al repository GitHub (DISABILITATO) ---------------------------------
-# Per mostrare il link al repo (e l'icona in header), togli i # da repo_url/repo_name
-# e riattiva anche 'theme.icon.repo' sopra.
-# repo_url: https://github.com/GiuseppeBassi
-# repo_name: GiuseppeBassi
-# edit_uri: edit/main/docs/   # Opzionale: abilita "Edit this page" indicando il path corretto
-# ------------------------------------------------------------------------------
-
-edit_uri: ""  # Lascia vuoto per NON mostrare "Edit this page"
+edit_uri: ""
 
 markdown_extensions:
   - admonition
@@ -74,5 +64,6 @@ markdown_extensions:
 
 extra_css:
   - overrides.css
+  - princeton.css
 
 plugins: []

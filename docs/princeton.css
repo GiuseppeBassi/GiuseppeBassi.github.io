@@ -1,0 +1,17 @@
+/* Small, isolated adjustments for the Princeton seal. */
+.overlay-row .right .princeton-seal{
+  height: 70px;
+  width: auto;
+}
+
+@media (max-width: 960px){
+  .overlay-row .right{
+    gap: 10px;
+  }
+  .overlay-row .right img{
+    height: 54px;
+  }
+  .overlay-row .right .princeton-seal{
+    height: 60px;
+  }
+}

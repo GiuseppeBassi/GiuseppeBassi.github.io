@@ -29,7 +29,7 @@
 </div>
 
 <p class="headline-subtitle">
-  PhD student in Operations Research and Financial Engineering at Princeton University
+  PhD student in Operations Research and Financial Engineering
 </p>
 
 <p class="top-cta">

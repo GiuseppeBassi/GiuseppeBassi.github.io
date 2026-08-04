@@ -294,3 +294,19 @@ body, .md-typeset { font-family: var(--md-text-font); }
   text-decoration: underline;
   border-bottom-color: currentColor;
 }
+
+/* =========================================================
+   MAINTENANCE BANNER (temporaneo — rimuovi questo blocco e il
+   banner HTML in index.md / notes.md a fine aggiornamento)
+   ========================================================= */
+.maintenance-banner{
+  background: #fff4e5;
+  border: 1px solid #f0b429;
+  color: #7a4a00;
+  border-radius: 10px;
+  padding: .65rem 1rem;
+  margin: 0 0 14px 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14.5px;
+}

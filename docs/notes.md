@@ -1,4 +1,4 @@
-# Notes / Materials
+# Notes
 
 ## Bachelor's Thesis
 

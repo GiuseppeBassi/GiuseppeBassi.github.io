@@ -3,7 +3,7 @@ site_description: Notes in applied mathematics and mathematical olympiads
 
 nav:
   - Home: index.md
-  - Notes / Materials: notes.md
+  - Notes: notes.md
 
 theme:
   name: material
@@ -65,5 +65,6 @@ markdown_extensions:
 extra_css:
   - overrides.css
   - princeton.css
+  - mobile.css
 
 plugins: []

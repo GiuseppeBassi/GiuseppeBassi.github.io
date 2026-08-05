@@ -10,7 +10,9 @@ Personal lecture notes from my studies at Bocconi University and Princeton Unive
 
     **Notes & Updates**  
     - **Current version:** 11 Mar 2026  
-    - **PDF:** upload in progress  
+
+    **Access**  
+    <a class="download-link" href="../assets/PROBABILITY_THEORY.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/PROBABILITY_THEORY.pdf" download>Download PDF</a>
 
 ???+ info "Differential Geometry"
     **Description**  
@@ -19,8 +21,8 @@ Personal lecture notes from my studies at Bocconi University and Princeton Unive
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
 
-    **Download**  
-    <a class="download-link" href="../assets/DIFFERENTIAL_GEOMETRY.pdf" download>Download *Differential Geometry*</a>
+    **Access**  
+    <a class="download-link" href="../assets/DIFFERENTIAL_GEOMETRY.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/DIFFERENTIAL_GEOMETRY.pdf" download>Download PDF</a>
 
 ???+ info "Analysis 1"
     **Description**  
@@ -29,8 +31,8 @@ Personal lecture notes from my studies at Bocconi University and Princeton Unive
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
 
-    **Download**  
-    <a class="download-link" href="../assets/ANALYSIS_1.pdf" download>Download *Analysis 1*</a>
+    **Access**  
+    <a class="download-link" href="../assets/ANALYSIS_1.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/ANALYSIS_1.pdf" download>Download PDF</a>
 
 ???+ info "Decision Theory"
     **Description**  
@@ -39,8 +41,8 @@ Personal lecture notes from my studies at Bocconi University and Princeton Unive
     **Notes & Updates**  
     - **Current version:** 25 Sep 2025  
 
-    **Download**  
-    <a class="download-link" href="../assets/DECISION_THEORY.pdf" download>Download *Decision Theory*</a>
+    **Access**  
+    <a class="download-link" href="../assets/DECISION_THEORY.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/DECISION_THEORY.pdf" download>Download PDF</a>
 
 !!! tip "Coming soon"
     - Physics 1  
@@ -61,8 +63,8 @@ Some handouts I curated during my Olympiad period.
     **Notes & Updates**  
     - **Current version:** 13 Apr 2025  
 
-    **Download**  
-    <a class="download-link" href="../assets/COMPLEX_ROOTS_OF_UNITY_IN_MATH_OLYMPIADS.pdf" download>Download *Complex Roots of Unity in Math Olympiads*</a>
+    **Access**  
+    <a class="download-link" href="../assets/COMPLEX_ROOTS_OF_UNITY_IN_MATH_OLYMPIADS.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/COMPLEX_ROOTS_OF_UNITY_IN_MATH_OLYMPIADS.pdf" download>Download PDF</a>
 
 !!! tip "Coming soon"
     More Olympiad material is coming — stay tuned.

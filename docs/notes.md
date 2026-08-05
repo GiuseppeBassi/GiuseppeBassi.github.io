@@ -1,5 +1,17 @@
 # Notes / Materials
 
+## Bachelor's Thesis
+
+???+ info "Optimal Transport at Finite Temperature"
+    **Description**  
+    A mathematically explicit analysis of the finite-temperature approach to discrete optimal transport introduced by Koehl, Delarue, and Orland, developed under the supervision of Professor Giuseppe Savaré. The thesis proves convergence and monotonicity through convex optimization and duality, recasts the method as a convex regularized transport problem, and develops a rigorous measure-theoretic and Fourier-analytic framework for the statistical-physics derivation. It also identifies the hypotheses required for a multidimensional steepest-descent argument and critically reassesses the claims of the original work.
+
+    **Notes & Updates**  
+    - **Current version:** 15 Jun 2026  
+
+    **Access**  
+    <a class="download-link" href="../assets/OPTIMAL_TRANSPORT_AT_FINITE_TEMPERATURE.pdf" target="_blank" rel="noopener">View PDF</a> · <a class="download-link" href="../assets/OPTIMAL_TRANSPORT_AT_FINITE_TEMPERATURE.pdf" download>Download PDF</a>
+
 ## Lecture Notes
 
 Personal lecture notes from my studies at Bocconi University and Princeton University.

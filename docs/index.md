@@ -23,7 +23,7 @@
     <div class="right">
       <img src="assets/Logo_Bocconi_1.png" alt="Bocconi University">
       <img src="assets/LOGO_BAMS.png" alt="BAMS">
-      <img class="princeton-seal" src="assets/Princeton_seal.png" alt="Princeton University">
+      <img class="princeton-seal" src="assets/Princeton_seal.svg" alt="Princeton University">
     </div>
   </div>
 </div>

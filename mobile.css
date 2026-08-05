@@ -1,0 +1,57 @@
+@media (max-width: 768px){
+  .hero-wrap{
+    margin-bottom: 0;
+  }
+
+  .overlay-row{
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: -55px 12px 0;
+    display: grid;
+    grid-template-columns: var(--avatar-size) minmax(0, 1fr);
+    grid-template-rows: var(--avatar-size) auto;
+    gap: 6px 12px;
+    align-items: start;
+  }
+
+  .overlay-row .avatar{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contacts{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+    transform: none;
+    padding-bottom: 4px;
+    gap: 6px 8px;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .overlay-row .right{
+    grid-column: 1;
+    grid-row: 2;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    width: var(--avatar-size);
+    gap: 4px !important;
+    padding: 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .overlay-row .right img,
+  .overlay-row .right .princeton-seal{
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain;
+  }
+
+  .headline-subtitle{
+    margin-top: 18px;
+  }
+}

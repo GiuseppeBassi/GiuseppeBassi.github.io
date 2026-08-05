@@ -15,3 +15,52 @@
     height: 60px;
   }
 }
+
+/* Simple mobile layout: contacts below the lake, compact logo grid. */
+@media (max-width: 768px){
+  .hero-wrap{
+    margin-bottom: 148px;
+  }
+
+  .overlay-row{
+    grid-template-columns: var(--avatar-size) 1fr;
+    grid-template-areas:
+      "avatar contacts"
+      "avatar logos";
+    align-items: start;
+    bottom: -124px;
+  }
+
+  .overlay-row .avatar{
+    grid-area: avatar;
+  }
+
+  .contacts{
+    grid-area: contacts;
+    transform: none;
+    padding: 8px 0 0;
+    gap: 6px 8px;
+    font-size: 14px;
+  }
+
+  .overlay-row .right{
+    grid-area: logos;
+    display: grid;
+    grid-template-columns: repeat(2, 34px);
+    gap: 6px 10px;
+    justify-content: start;
+    align-items: center;
+    padding: 4px 0 0;
+  }
+
+  .overlay-row .right img,
+  .overlay-row .right .princeton-seal{
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .headline-subtitle{
+    margin-top: 8px;
+  }
+}

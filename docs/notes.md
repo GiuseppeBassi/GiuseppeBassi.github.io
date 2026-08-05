@@ -68,7 +68,7 @@ Personal lecture notes from my studies at Bocconi University and Princeton Unive
 
 Some handouts I curated during my Olympiad period.
 
-???+ tip "Complex Roots of Unity in Math Olympiads"
+???+ info "Complex Roots of Unity in Math Olympiads"
     **Description**  
     This work shows how complex roots of unity serve as an elegant bridge connecting the core areas of Olympiad mathematics: algebra, geometry, number theory, and combinatorics.
 

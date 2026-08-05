@@ -1,5 +1,5 @@
 site_name: Giuseppe Bassi
-site_description: Notes in probability, analysis, optimization, and mathematical olympiads
+site_description: Notes in applied mathematics and mathematical olympiads
 
 nav:
   - Home: index.md

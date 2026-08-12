@@ -46,6 +46,8 @@ This website collects my university notes and some materials from Mathematical O
 
 If you notice mistakes or have suggestions for improvement feel free to contact me at [giuseppe.bassi@princeton.edu](mailto:giuseppe.bassi@princeton.edu).
 
+You can find my <a href="assets/Giuseppe_Bassi_CV.pdf" target="_blank" rel="noopener">CV here</a>.
+
 ---
 
 ## Other projects  
